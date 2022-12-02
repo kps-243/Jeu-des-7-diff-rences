@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+}
+body canvas {
+  width: 500px;
+  height: 500px;
+}
+body img {
+  width: 500px;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */
