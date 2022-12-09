@@ -10,22 +10,23 @@ let ctx2 = canvas2.getContext("2d");
 let img1 = new Image();
 img1.src = "/img/diff1.jpg";
 
-let img2 = new Image();
-img2.src = "/img/diff2.jpg";
+let img2 = document.getElementById("diff2");
+
+// img2.addEventListener("load", () => affiche);
+// function affiche() {
+//   ctx2.drawImage(img2, 50, 25, 500, 500);
+// }
 
 img1.onload = function () {
-  ctx1.drawImage(img1, 10, 0);
-};
-img2.onload = function () {
-  ctx1.drawImage(img2, 500, 0);
+  ctx1.drawImage(img1, 0, 0);
+  canvas1.width = 300;
+  canvas1.height = 300;
 };
 
-// Dessin de l'image finale sur le deuxième canvas
+// Taille de l'image dans la même place que le canva
 
-// ctx2.fillStyle = "red";
-// ctx2.fillRect(10, 10, 30, 30);
-// ctx2.fillStyle = "green";
-// ctx2.fillRect(60, 10, 30, 30);
+// img1.width = canvas1.width;
+// img2.width = canvas2.width;
 
 // Fonction pour détecter les différences entre les deux images
 function findDifferences() {
