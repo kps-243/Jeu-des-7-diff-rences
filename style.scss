@@ -28,7 +28,8 @@ body{
 
     #img{
     @include FlexMid();
-    margin-top: -40%;
+    width: 970px;
+    margin-top: -400px;
     transform: scale(0.4);
     #diff1, #diff2{
             position: relative;
@@ -100,4 +101,10 @@ body{
     #cercle7-2{
          left: add(-400px);
     }
+}
+
+@media screen and (min-width: 1000px){
+
+
+    
 }

@@ -2,7 +2,8 @@ body #img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -40%;
+  width: 970px;
+  margin-top: -400px;
   transform: scale(0.4);
 }
 body #img #diff1, body #img #diff2 {
