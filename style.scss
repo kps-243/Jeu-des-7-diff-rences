@@ -1,33 +1,40 @@
+@mixin FlexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body{
 
-
-    .img{
-    display: flex;
-    
-    #img1, #img2{
+    #img{
+    @include FlexMid();
+    margin-top: -40%;
+    transform: scale(0.4);
+    #diff1, #diff2{
             position: relative;
-            width: 100vw;
+            width: 1160px;
+            height: 1506px;
         }
     }
     .cercle1, .cercle2, .cercle3, .cercle4, .cercle5{
         position: absolute;
-        height: 20px;
-        width: 20px;
-        border-radius: 20px;
-        border: 2px solid red;
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        border: 6px solid red;
         opacity: 0;
     
     }
 
     .cercle1, #cercle1-2{
-        top: 7%;    
+        top: 250px;    
     }
     .cercle1{
-        left: 36%;
+        left: -70px;
     }
 
     #cercle1-2{
-        left: 79%;
+        left: 1100px;
     }
     .cercle2{
     top: 7%;

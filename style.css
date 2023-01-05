@@ -1,26 +1,31 @@
-body .img {
+body #img {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40%;
+  transform: scale(0.4);
 }
-body .img #img1, body .img #img2 {
+body #img #diff1, body #img #diff2 {
   position: relative;
-  width: 100vw;
+  width: 1160px;
+  height: 1506px;
 }
 body .cercle1, body .cercle2, body .cercle3, body .cercle4, body .cercle5 {
   position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 20px;
-  border: 2px solid red;
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  border: 6px solid red;
   opacity: 0;
 }
 body .cercle1, body #cercle1-2 {
-  top: 7%;
+  top: 250px;
 }
 body .cercle1 {
-  left: 36%;
+  left: -70px;
 }
 body #cercle1-2 {
-  left: 79%;
+  left: 1100px;
 }
 body .cercle2 {
   top: 7%;
