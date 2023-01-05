@@ -4,6 +4,26 @@
     align-items: center;
 }
 
+@mixin BigCircle {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+@mixin MediumCircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+@mixin SmallCircle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+@function add($a) {
+    @return $a + 1160px;
+}
+
 body{
 
     #img{
@@ -16,42 +36,68 @@ body{
             height: 1506px;
         }
     }
-    .cercle1, .cercle2, .cercle3, .cercle4, .cercle5{
+    .cercle1, .cercle2, .cercle3, .cercle4, .cercle5, .cercle6, .cercle7{
         position: absolute;
-        height: 200px;
-        width: 200px;
-        border-radius: 100px;
         border: 6px solid red;
         opacity: 0;
-    
-    }
-
-    .cercle1, #cercle1-2{
-        top: 250px;    
     }
     .cercle1{
+        @include BigCircle();
         left: -70px;
+        top: 250px; 
     }
 
     #cercle1-2{
-        left: 1100px;
+        left: add(-70px);
     }
     .cercle2{
-    top: 7%;
-    left: 7%;
+        @include SmallCircle();
+        top: 650px;
+        left: -400px;
+    }
+    
+    #cercle2-2{
+        left: add(-400px);
     }
 
     .cercle3{
-        top: 32%;
-        left: 5%;
+        @include MediumCircle();
+        top: 800px;
+        left: 320px; 
     }
-
+    #cercle3-2{
+        left: add(320px);
+    }
     .cercle4{
-        top: 45%;
-        left: 31%;
+        @include SmallCircle();
+        top: 650px;
+        left: -630px;
+    }
+    #cercle4-2{
+        left: add(-630px);
     }
     .cercle5{
-        top: 49%;
-        left: 12%;
+        @include SmallCircle();
+        top: 1070px;
+        left: -550px;
+    }
+    #cercle5-2{
+        left: add(-550px);
+    }
+    .cercle6{
+        @include SmallCircle();
+        top: 970px;
+        left: -660px;
+    }
+    #cercle6-2{
+        left: add(-660px);
+    }
+    .cercle7{
+        @include BigCircle();
+        top: 1100px;
+        left: -400px;    
+    }
+    #cercle7-2{
+         left: add(-400px);
     }
 }
